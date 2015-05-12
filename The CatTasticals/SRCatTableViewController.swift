@@ -58,7 +58,7 @@ class SRCatTableViewController: PFQueryTableViewController {
             if  votes == nil{
                 votes = 0
             }
-
+            
             cell?.catVotesLabel?.text = "\(votes!) votes"
             
             var credit:String? = pfObject["cc_by"] as? String

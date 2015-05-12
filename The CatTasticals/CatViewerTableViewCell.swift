@@ -14,10 +14,32 @@ class CatViewerTableViewCell: PFTableViewCell {
     @IBOutlet weak var catNameLabel:UILabel?
     @IBOutlet weak var catVotesLabel:UILabel?
     @IBOutlet weak var catCreditLabel:UILabel?
+    @IBOutlet weak var catPawIcon:UIImageView?
     
     override func awakeFromNib() {
+        let gesture = UITapGestureRecognizer(target: self, action: Selector("onDoubleTap:"))
+        gesture.numberOfTapsRequired = 2
+        
+        contentView.addGestureRecognizer(gesture)
+        catPawIcon?.hidden = true
         super.awakeFromNib()
+        
         // Initialization code
+    }
+    
+    func onDoubleTap(sender: AnyObject){
+        
+        catPawIcon?.hidden = false
+        catPawIcon?.alpha = 1.0
+        
+        UIView.animateKeyframesWithDuration(1.0, delay: 1.0, options: nil, animations: {
+            
+            self.catPawIcon?.alpha = 0
+            
+            }, completion: {
+                (value:Bool) in
+                self.catPawIcon?.hidden = true
+        })
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

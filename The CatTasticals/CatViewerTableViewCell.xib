@@ -47,9 +47,17 @@
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="Orw-89-YnR" userLabel="paw image">
+                        <rect key="frame" x="110" y="108" width="100" height="100"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="2kw-9G-xzw"/>
+                            <constraint firstAttribute="height" constant="100" id="N4Y-3e-KOb"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="fvr-Rc-zWE" secondAttribute="trailing" constant="26" id="6S3-KS-FkY"/>
+                    <constraint firstItem="Orw-89-YnR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="100" id="BAR-Wl-kLF"/>
                     <constraint firstItem="rbg-nQ-rdm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="Dvy-iZ-9nJ"/>
                     <constraint firstItem="6fH-Ng-AUn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="H7D-sb-QNk"/>
                     <constraint firstAttribute="centerX" secondItem="rbg-nQ-rdm" secondAttribute="centerX" id="LaD-tM-Mgw"/>
@@ -58,6 +66,7 @@
                     <constraint firstAttribute="bottom" secondItem="6fH-Ng-AUn" secondAttribute="bottom" constant="11" id="aHj-ud-Rgr"/>
                     <constraint firstItem="fvr-Rc-zWE" firstAttribute="top" secondItem="DaK-Q8-EbV" secondAttribute="bottom" constant="11" id="fNh-Jb-VAe"/>
                     <constraint firstItem="rbg-nQ-rdm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="i4x-8e-geg"/>
+                    <constraint firstAttribute="centerX" secondItem="Orw-89-YnR" secondAttribute="centerX" id="l7J-Wx-M9I"/>
                     <constraint firstAttribute="trailingMargin" secondItem="DaK-Q8-EbV" secondAttribute="trailing" constant="7" id="qUN-mI-8oG"/>
                 </constraints>
             </tableViewCellContentView>
@@ -65,8 +74,12 @@
                 <outlet property="catCreditLabel" destination="DaK-Q8-EbV" id="ail-KI-tTv"/>
                 <outlet property="catImageView" destination="rbg-nQ-rdm" id="LR2-zC-68j"/>
                 <outlet property="catNameLabel" destination="6fH-Ng-AUn" id="o2Y-P7-GPi"/>
+                <outlet property="catPawIcon" destination="Orw-89-YnR" id="3pQ-9P-PgU"/>
                 <outlet property="catVotesLabel" destination="fvr-Rc-zWE" id="TwM-h4-1Ua"/>
             </connections>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="Image" width="100" height="100"/>
+    </resources>
 </document>
