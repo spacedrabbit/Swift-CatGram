@@ -16,6 +16,8 @@ class CatViewerTableViewCell: PFTableViewCell {
     @IBOutlet weak var catCreditLabel:UILabel?
     @IBOutlet weak var catPawIcon:UIImageView?
     
+    var parseObject:PFObject?
+    
     override func awakeFromNib() {
         let gesture = UITapGestureRecognizer(target: self, action: Selector("onDoubleTap:"))
         gesture.numberOfTapsRequired = 2
@@ -28,6 +30,16 @@ class CatViewerTableViewCell: PFTableViewCell {
     }
     
     func onDoubleTap(sender: AnyObject){
+        
+        if (parseObject != nil){
+            if var votes:Int? = parseObject!.objectForKey("votes") as? Int{
+                votes!++
+                
+                parseObject!.setObject(votes!, forKey: "votes")
+                parseObject!.saveInBackground()
+                catVotesLabel?.text = "\(votes!) votes"
+            }
+        }
         
         catPawIcon?.hidden = false
         catPawIcon?.alpha = 1.0

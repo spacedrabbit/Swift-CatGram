@@ -50,6 +50,7 @@ class SRCatTableViewController: PFQueryTableViewController {
         if ( cell == nil ){
             cell = NSBundle.mainBundle().loadNibNamed("CatViewerTableViewCell", owner: self, options: nil)[0] as? CatViewerTableViewCell
         }
+        cell?.parseObject = object
         
         if let pfObject = object {
             cell?.catNameLabel?.text = pfObject[SRParseConsts.CatTasticalConsts.nameKey] as? String
