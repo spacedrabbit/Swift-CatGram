@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="350" id="KGk-i7-Jjw" customClass="CatViewerTableViewCell" customModule="The_CatTasticals" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="350"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rbg-nQ-rdm">
+                        <rect key="frame" x="15" y="15" width="290" height="290"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="290" id="RfO-iM-CHY"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6fH-Ng-AUn">
+                        <rect key="frame" x="25" y="317" width="209" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="7IK-uA-DSF"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="vote" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fvr-Rc-zWE">
+                        <rect key="frame" x="225" y="317" width="69" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="55F-bM-fWv"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Author / CC" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DaK-Q8-EbV">
+                        <rect key="frame" x="199" y="285" width="106" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="4zA-h5-02l"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="fvr-Rc-zWE" secondAttribute="trailing" constant="26" id="6S3-KS-FkY"/>
+                    <constraint firstItem="rbg-nQ-rdm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="Dvy-iZ-9nJ"/>
+                    <constraint firstItem="6fH-Ng-AUn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="H7D-sb-QNk"/>
+                    <constraint firstAttribute="centerX" secondItem="rbg-nQ-rdm" secondAttribute="centerX" id="LaD-tM-Mgw"/>
+                    <constraint firstAttribute="trailing" secondItem="rbg-nQ-rdm" secondAttribute="trailing" constant="15" id="O6s-hS-o4c"/>
+                    <constraint firstAttribute="bottom" secondItem="fvr-Rc-zWE" secondAttribute="bottom" constant="11" id="Xse-sQ-ivP"/>
+                    <constraint firstAttribute="bottom" secondItem="6fH-Ng-AUn" secondAttribute="bottom" constant="11" id="aHj-ud-Rgr"/>
+                    <constraint firstItem="fvr-Rc-zWE" firstAttribute="top" secondItem="DaK-Q8-EbV" secondAttribute="bottom" constant="11" id="fNh-Jb-VAe"/>
+                    <constraint firstItem="rbg-nQ-rdm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="i4x-8e-geg"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="DaK-Q8-EbV" secondAttribute="trailing" constant="7" id="qUN-mI-8oG"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="catCreditLabel" destination="DaK-Q8-EbV" id="ail-KI-tTv"/>
+                <outlet property="catImageView" destination="rbg-nQ-rdm" id="LR2-zC-68j"/>
+                <outlet property="catNameLabel" destination="6fH-Ng-AUn" id="o2Y-P7-GPi"/>
+                <outlet property="catVotesLabel" destination="fvr-Rc-zWE" id="TwM-h4-1Ua"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>
